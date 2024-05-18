@@ -13,6 +13,15 @@ function createpassword() {
     password += lower[Math.floor(Math.random() * lower.length)];
     password += number[Math.floor(Math.random() * number.length)];
     password += symbol[Math.floor(Math.random() * symbol.length)];
- 
+    while (lenght > password.length) {
+        password += allchar[Math.floor(Math.random() * allchar.length)];
+
+    }
+    pass.value = password;
 }
 
+function copy(params) {
+    pass.select();
+    document.execCommand("copy");
+
+}
